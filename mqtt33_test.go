@@ -1,11 +1,17 @@
-# mqtt33
+package mqtt33
 
-golang mqtt包
+import (
+	"encoding/json"
+	MQTT "github.com/eclipse/paho.mqtt.golang"
+	"testing"
+	"time"
+)
 
-使用示例：
-```go
+//"192.168.3.212",
+//"1883",
 
-    q := NewMqtt(
+func TestName(t *testing.T) {
+	q := NewMqtt(
 		MqConfig{
 			Port:     1883,
 			Url:      "192.168.3.212",
@@ -35,4 +41,4 @@ golang mqtt包
 			time.Sleep(3 * time.Second)
 		}
 	}()
-```
+}
